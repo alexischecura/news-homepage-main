@@ -1,15 +1,15 @@
 :root {
-  --main-color: hsl(240, 100%, 5%);
+  --main-color: hsl(5, 85%, 63%);
+  --dark-color: hsl(240, 100%, 5%);
   --text-color: hsl(236, 13%, 42%);
   --text-light-color: hsl(233, 8%, 79%);
   --text-hover-color: hsl(35, 77%, 62%);
-  --accent-color: hsl(5, 85%, 63%);
   --bg-and-text-color: hsl(36, 100%, 99%);
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
 }
 
 * {
@@ -19,58 +19,104 @@
 }
 
 body {
-  width: 1100px;
+  width: 90vw;
+  max-width: 1100px;
+  min-height: 100vh;
   margin: 0 auto;
+  padding-top: 100px;
   background-color: var(--bg-and-text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  position: relative;
 }
 
 /* Header */
 
-
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
   margin-bottom: 50px;
 }
 
-.nav-list{
+.nav-list {
   display: flex;
   gap: 40px;
   list-style: none;
 }
-.nav-link{
+.nav-link {
   transition: 0.3s all;
 }
 
-.nav-link:link, .nav-link:visited{
+.nav-link:link,
+.nav-link:visited {
   text-decoration: none;
   color: var(--text-color);
+  font-size: 16px;
 }
 
-.nav-link:hover{
-  color:var(--text-hover-color)
+.nav-link:hover {
+  color: var(--text-hover-color);
 }
 
-.btn-mobile{
+.btn-mobile {
   display: none;
+}
+
+/* Main */
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50vh 13vh;
+  gap: 30px;
+}
+
+/* First section */
+.first-section {
+  overflow: hidden;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.main-img {
+  width: 100%;
+}
+/* Aside  */
+.aside {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+/* Bottom section */
+.bottom-section {
+  grid-column: 1 / -1;
+
+
+  display: flex;
+}
+
+.bottom-card{
+  display: flex;
+}
+
+.bottom-card-img{
+
 }
 
 
 /* Atribution */
 footer {
+  width: 100%;
   padding: 0 24px;
   position: absolute;
   bottom: 10px;
+  font-size: 12px;
 }
 
 .attribution {
-  font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-  font-size: 11px;
 }
