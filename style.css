@@ -64,7 +64,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: fit-content 13vh;
+  grid-template-rows: fit-content minmax(120px, fit-content);
   column-gap: 30px;
   row-gap: 50px;
 }
@@ -134,34 +134,49 @@ body {
   background-color: var(--dark-color);
   padding: 8px 24px;
   display: flex;
-  min-height: 13vh;
   flex-direction: column;
   justify-content: space-around;
   color: var(--text-light-color);
 }
-.aside-note-link:link, .aside-note-link:visited{
+
+.aside-title-link:link,
+.aside-title-link:visited {
   text-decoration: none;
   color: var(--text-light-color);
+}
+.aside-title-link:hover,
+.aside-title-link:active {
+  color: var(--main-color);
 }
 
 .aside-title {
   font-size: 36px;
   color: var(--text-hover-color);
 }
-.aside-divider{
-  height: 1px;
-  background-color: var(--text-color);
-}
-.aside-note-title{
+
+.aside-note-title {
   color: var(--bg-and-text-color);
   margin-bottom: 14px;
   transition: 0.2s all;
 }
-.aside-note-title:hover{
+
+.aside-note-link:link,
+.aside-note-link:visited {
+  text-decoration: none;
+  color: var(--text-light-color);
+}
+
+.aside-note-link:hover > .aside-note-title{
   color: var(--text-hover-color);
 }
 
-.aside-note-text{
+.aside-divider {
+  height: 1px;
+  background-color: var(--text-color);
+  width: 100%;
+}
+
+.aside-note-text {
   font-size: 15px;
   line-height: 1.7;
 }
@@ -174,12 +189,31 @@ body {
   column-gap: 30px;
 }
 
-.bottom-card {
+.bottom-card-article {
   display: flex;
+  gap: 24px;
 }
 
 .bottom-card-img {
-  height: 13vh;
+  width: 30%;
+  height: auto;
+}
+
+.bottom-card > *{
+  margin-bottom: 16px;
+}
+.card-number{
+  color: var(--text-light-color);
+  font-size: 32px;
+  line-height: 0.9;
+}
+.card-title{
+  font-weight: 800;
+}
+
+.bottom-card-text{
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 /* Atribution */
