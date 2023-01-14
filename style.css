@@ -143,7 +143,7 @@ body {
   text-decoration: none;
   color: var(--text-light-color);
 }
-.aside-title-link:hover > .aside-title{
+.aside-title-link:hover > .aside-title {
   color: var(--main-color);
 }
 
@@ -189,7 +189,7 @@ body {
   column-gap: 30px;
 }
 
-.bottom-card-img{
+.bottom-card-img {
   width: 30%;
   object-fit: cover;
 }
@@ -199,9 +199,21 @@ body {
   gap: 24px;
 }
 
-.bottom-card h3{
+.bottom-card h3 {
   margin-bottom: 12px;
+  transition: 0.2s all;
 }
+
+.button-card-link:link,
+.button-card-link:visited {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.button-card-link:hover,
+.button-card-link:active {
+  color: var(--main-color);
+}
+
 .card-number {
   color: var(--text-light-color);
   font-size: 32px;
