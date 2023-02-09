@@ -7,7 +7,6 @@
 @media (max-width: 920px) {
   body {
     padding-top: 30px;
-
   }
   .main {
     display: grid;
@@ -30,6 +29,7 @@
     max-width: 30%;
   }
   .nav-list {
+    display: flex;
     background-color: #fff;
     flex-direction: column;
     gap: 30px;
@@ -97,6 +97,6 @@
   }
 
   .main-note-h1{
-    font-size: 48px;
+    font-size: 36px;
   }
 }
