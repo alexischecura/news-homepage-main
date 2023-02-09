@@ -207,7 +207,8 @@ body {
 }
 
 .bottom-card-img {
-  width: 30%;
+  width: 105px;
+  height: auto;
   object-fit: cover;
 }
 
