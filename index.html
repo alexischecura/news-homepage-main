@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,8 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script src="script.js" async></script>
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
@@ -35,19 +37,27 @@
           <li><a href="" class="nav-link">Categories</a></li>
         </ul>
       </nav>
-      <button class="btn-mobile">
-        <i></i>
-        <i></i>
+      <button class="btn-mobile-nav">
+        <img class="icon-menu" src="assets/images/icon-menu.svg"">
+        <img
+        class="icon-menu-close"
+        src="assets/images/icon-menu-close.svg"
+        alt=""
+        />
       </button>
     </header>
     <main class="main">
       <article class="first-article">
-        <figure class="main-figure">
+        <picture class="main-figure">
+          <source
+            media="(max-width: 600px)"
+            srcset="./assets/images/image-web-3-mobile.jpg"
+          />
           <img
             src="./assets/images/image-web-3-desktop.jpg"
             alt="a 3d ilustration of geometric shape objects like the game shape sorter joined"
           />
-        </figure>
+        </picture>
         <h1 class="main-note-h1">The Bright Future of Web 3.0?</h1>
         <div class="main-note-content">
           <p class="note-advance">
@@ -93,11 +103,11 @@
       </aside>
       <section class="bottom-section">
         <article class="bottom-card-article">
-            <img
-              class="bottom-card-img"
-              src="./assets/images/image-retro-pcs.jpg"
-              alt="An old PC surrounded by old devices for play videogames, like consoles and other PCs"
-            />
+          <img
+            class="bottom-card-img"
+            src="./assets/images/image-retro-pcs.jpg"
+            alt="An old PC surrounded by old devices for play videogames, like consoles and other PCs"
+          />
           <div class="bottom-card">
             <h2 class="card-number">01</h2>
             <a class="button-card-link" href="#">
@@ -142,18 +152,6 @@
         </article>
       </section>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a
-          href="https://www.frontendmentor.io/profile/alexisrulo"
-          target="_blank"
-          >Alexis Checura </a
-        >.
-      </div>
-    </footer>
+    <div class="overlay hidden"></div>
   </body>
 </html>
